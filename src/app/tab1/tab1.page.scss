@@ -1,0 +1,12 @@
+.pokemons{
+  display: flex;
+  flex-wrap: wrap;
+}
+.pokemons > .pokemon{
+  flex-basis: 50%;
+}
+.pokemon-img + b{
+  font-size: 1.2rem;
+  text-align: center;
+  display: block;
+}

@@ -1,0 +1,39 @@
+.modal-card{
+    margin-top: 2rem;
+}
+.modal-image{
+    display: flex;
+    justify-content: center;
+    margin-bottom: -1rem;
+}
+
+.modal-image img{
+    margin-top: -4rem;
+    width: 150px;
+    height: 150px;
+}
+.modal-card ion-card{
+    overflow: visible!important; 
+    border-radius:15px;
+}
+.align-canter{
+    text-align: center;
+
+}
+.align-canter p{
+    font-size: 0.8rem;
+}
+.align-canter p:first-child{
+    margin-bottom: 0.7rem;
+    font-size: 1.2rem;
+}
+.d-flex{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.mb{
+    margin-bottom: 0.8rem;
+    margin-top: 0.5rem;
+}
+

@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-title>
+      Home
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-progress-bar type="indeterminate" *ngIf="!isLoad"></ion-progress-bar>
+
+<ion-content >
+  <section class="pokemons" *ngIf="pokemons">
+    <div *ngFor="let pokemon of pokemons.results" class="pokemon" (click)="openModal(pokemon)">
+      <ion-card>
+        <ion-card-content>
+          <div class="pokemon-img">
+            <img [src]="pokemon.data.sprites.front_default" />
+          </div>
+          <b>{{pokemon.data.name}}</b>
+        </ion-card-content>
+      </ion-card>
+    </div>
+    <div style="padding:0 15px;width: 100%;">
+      <ion-button *ngIf="pokemons.previous" (click)="getPockemons(pokemons.previous)">Prev</ion-button>
+      <ion-button color="tertiary" style="margin-left: auto;" style="float:right" *ngIf="pokemons.next" (click)="getPockemons(pokemons.next)">Next
+      </ion-button>
+    </div>
+  </section>
+  <section *ngIf="isLoad && isMessage">
+    <ion-card>
+      <ion-card-content>
+        {{isMessage}}
+      </ion-card-content>
+    </ion-card>
+  </section>
+</ion-content>
+
